@@ -9,5 +9,11 @@ import { Component } from '@angular/core';
   `]
 })
 export class AppComponent {
-  title = 'Does this changed?';
+  showSecret = false;
+  log = [];
+
+  onToggleDetails(){
+    this.showSecret = !this.showSecret;
+    this.log.push(this.log.length + 1);
+  }
 }
